@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+}
+.svh {
+    height: 50%;
+}
+
+/* Items to animate */
+
+.svg__sun {
+    animation: sunAnimation 2s ease-in-out infinite alternate;
+    transform: scale(0.8);
+    transform-origin: 80% 20%;
+}
+
+.svg__eye {
+    animation: eyesAnimation 5s ease-in-out infinite;
+}
+
+.svg__note {
+    animation: noteAnimation 1s ease-in-out infinite alternate;
+    opacity: 1;
+}
+
+.svg__note--large {
+    animation-delay: 0.5s;
+}
+
+/* Keyframes */
+@keyframes sunAnimation {
+    100% {
+        transform: scale(0.9);
+    }
+}
+
+@keyframes eyesAnimation {
+    20% {
+        transform: translateX(30px);
+    }
+
+    40% {
+        transform: translateX(30px);
+    }
+    60% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes noteAnimation {
+    100% {
+        opacity: 0;
+    }
+}

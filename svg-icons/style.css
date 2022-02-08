@@ -1,0 +1,137 @@
+:root {
+    --primary: #25abd9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+    margin: auto;
+    width: 1000px;
+}
+
+.icon {
+    width: 200px;
+}
+
+.icon path {
+    fill: transparent;
+    stroke: #777;
+    stroke-width: 10;
+}
+
+.icon__svg--tree path {
+    stroke-dasharray: 1860;
+    stroke-dashoffset: 0;
+}
+
+.icon__svg--bolt path {
+    stroke-dasharray: 1550;
+    stroke-dashoffset: 0;
+}
+
+.icon__svg--glass path {
+    stroke-dasharray: 2100;
+    stroke-dashoffset: 0;
+}
+
+/* Hover */
+.icon__svg--tree:hover path {
+    animation: treeAnimation 2s linear forwards;
+}
+
+.icon__svg--bolt:hover path {
+    animation: boltAnimation 2s linear forwards;
+}
+
+.icon__svg--glass path {
+    animation: glassAnimation 2s linear forwards;
+}
+
+/* Keyframes */
+
+@keyframes treeAnimation {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40% {
+        stroke-dashoffset: 1860;
+        stroke: #777;
+    }
+
+    41% {
+        stroke: var(--primary);
+    }
+
+    80% {
+        stroke: dashoffset 3720px;
+        fill: transparent;
+    }
+
+    100% {
+        stroke: var(--primary);
+        fill: var(--primary);
+        stroke: dashoffset 3720px;
+    }
+}
+
+@keyframes boltAnimation {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40% {
+        stroke-dashoffset: 1550;
+        stroke: #777;
+    }
+
+    41% {
+        stroke: var(--primary);
+    }
+
+    80% {
+        stroke: dashoffset 3100px;
+        fill: transparent;
+    }
+
+    100% {
+        stroke: var(--primary);
+        fill: var(--primary);
+        stroke: dashoffset 3100px;
+    }
+}
+
+@keyframes glassAnimation {
+    0% {
+        stroke-dashoffset: 0;
+    }
+    40% {
+        stroke-dashoffset: 2100;
+        stroke: #777;
+    }
+
+    41% {
+        stroke: var(--primary);
+    }
+
+    80% {
+        stroke: dashoffset 4200px;
+        fill: transparent;
+    }
+
+    100% {
+        stroke: var(--primary);
+        fill: var(--primary);
+        stroke: dashoffset 4200px;
+    }
+}

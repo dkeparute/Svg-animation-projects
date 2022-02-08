@@ -1,0 +1,72 @@
+:root {
+    --primary: #25abd9;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.text__svg path {
+    animation: lineDraw, 2s ease forwards;
+    stroke: var(--primary);
+    stroke-width: 2px;
+}
+
+.text__svg path :first-child {
+    stroke-dasharray: 482;
+    stroke-dashoffset: 482;
+}
+
+.text__svg path:nth-child(2) {
+    stroke-dasharray: 312;
+    stroke-dashoffset: 312;
+}
+
+.text__svg path:nth-child(3) {
+    stroke-dasharray: 548;
+    stroke-dashoffset: 548;
+}
+.text__svg path:nth-child(4) {
+    stroke-dasharray: 326;
+    stroke-dashoffset: 326;
+}
+.text__svg path:nth-child(5) {
+    stroke-dasharray: 362;
+    stroke-dashoffset: 362;
+}
+.text__svg path:nth-child(6) {
+    stroke-dasharray: 283;
+    stroke-dashoffset: 283;
+}
+.text__svg path:nth-child(7) {
+    stroke-dasharray: 181;
+    stroke-dashoffset: 181;
+}
+.text__svg path:nth-child(8) {
+    stroke-dasharray: 226;
+    stroke-dashoffset: 226;
+}
+.text__svg path:nth-child(9) {
+    stroke-dasharray: 326;
+    stroke-dashoffset: 326;
+}
+
+/* Keyframes */
+@keyframes lineDraw {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
